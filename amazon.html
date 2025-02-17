@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ff159e243f.js" crossorigin="anonymous"></script>
+<style>
+    h4{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        color: white;
+        display: inline;
+        padding: 8px;
+    }
+    h3{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    h5{
+        font-weight: normal;
+    }
+</style>
+
+</head>
+<body>
+    <div style="padding: 0px 10px; display: flex; background-color: black;width: auto;height: 65px;">
+        <img style="padding: 0px 10px;height: 60px;" src="data:image/png;base64,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" alt=""><br>
+        <i style="padding: 0px 10px;margin-top: 20px; color: white;" class="fa-solid fa-location-dot"></i>
+        <h4 style="width:350px; padding: 0px 10px;font-size: 12px;color: rgb(204, 197, 197);">Delivering to Madurai 625014 <br> <b style="color: white;">Update Location</b><br></h4>
+        
+            <div  style="margin-top: 10px; width:700px;display:flex;height:20px;">
+            <select  style="background-color: rgb(212, 212, 212); border-bottom-left-radius: 5px;border-top-left-radius: 5px;height: 40px;" name="" id=""></select>
+            <input  placeholder="Search Amazon.in " style="height: 40px;width: 550px;" type="search" > 
+            <i style="border-top-right-radius: 5px;border-bottom-right-radius: 5px; background-color: orange;padding: 10px;height: 20px;" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        <h3 style="padding:10px 20px; font-size: 14px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">EN</h3>
+        <h4 style="padding:0px 20px; width: 230px; font-size: 14px;color:white;">Hello,Sign in <br><b>Account & List</b><br></h4>
+        <h4 style=" padding:0px 20px;width: 200px;font-size: 14px;color:white;">Returns<br><b>& Orders</b><br></h4>
+        
+        <i style="padding:30px 0px; color: white;" class="fa-solid fa-cart-shopping"></i>
+        <h4><b>Cart</b></h4>
+    </div>
+
+        <div style="height: 30px; background-color: rgb(63, 61, 61);">
+        <i style="color: white;padding-left: 10px;" class="fa-solid fa-bars"></i>
+        <h4 >All</h4>
+        <h4>MX Player</h4>
+        <h4>Sell</h4>
+        <h4>Best Sellers</h4>
+        <h4>Today's Deals</h4>
+        <h4>Mobiles</h4>
+        <h4>Electronics</h4>
+        <h4>Customer Service</h4>
+        <h4>Prime</h4>
+        <h4>Home & Kitchen</h4>
+        <h4>Amazon Pay</h4>
+        <h4>New Releases</h4>
+        <h4>Fashion</h4>
+        <h4>Computers</h4>
+
+
+<div style="background-color: rgb(223, 219, 219);height: 3000px;">
+    <img style="height: 400px;width: 1350px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Beauty/UBS/Dec/Makeup2._CB551715647_.png" alt="">
+    <div style="display: flex;">
+        <fieldset style="border: 0px; background-color: white; height: 400px;width:280px;margin-left: 10px;">
+            <h3>Revamp your home in style</h3>
+            <div style="display:flex;">
+            <div>
+                <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_furnishings_2._SY116_CB555624324_.jpg" alt="">
+                <h5>Cushion covers, <br>beadsheets&more</h5>
+            </div>
+            <div>
+                <img style="margin-left: 10px;height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_decor_1._SY116_CB555624324_.jpg" alt="">
+                <h5>Figurines, vase & more</h5>
+            </div>
+            </div>
+            <div style="display: flex;">
+            <div>
+                <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg" alt="">
+                <h5>Home storage</h5>
+            </div>
+            <div>
+                <img style="margin-left: 10px; height:100px;width: 130px;"src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_lighting_2._SY116_CB555624324_.jpg" alt="">
+            <h5>Lighting solutions</h5>
+            </div>
+            </div>
+        </fieldset>
+   
+
+
+
+    <fieldset style="border: 0px;background-color: white; height: 400px;width:280px;margin-left: 30px;">
+        <h3>Appliances for your home <br>Up to 55% off</h3>
+        <div style="display:flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08RDL6H79._SY116_CB667322346_.jpg" alt="">
+            <h5>Air Conditioners</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px;height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08345R1ZW._SY116_CB667322346_.jpg" alt="">
+            <h5>Refrigerators</h5>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B07G5J5FYP._SY116_CB667322346_.jpg" alt="">
+            <h5>Microwaves</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px; height:100px;width: 130px;"src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/186x116---wm._SY116_CB667322346_.jpg" alt="">
+        <h5>Washing Machine</h5>
+        </div>
+    </div>
+    </fieldset>
+
+    <fieldset style="border: 0px;background-color: white; height: 400px;width:280px;margin-left: 30px;">
+        <h3>Starting $149 Headphones</h3>
+        <div style="display:flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" alt="">
+            <h5>Starting $249 | boAt</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px;height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" alt="">
+            <h5>Starting $349 | bouls</h5>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/GW/QC/PC/PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" alt="">
+            <h5>Starting $649 | Noise</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px; height:100px;width: 130px;"src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/june/CE/MSO/PD3/PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" alt="">
+        <h5>Starting $149 | <br>Zebronics</h5>
+        </div>
+    </div>
+    </fieldset>
+
+    <fieldset style="border: 0px;background-color: white; height: 400px;width:280px;margin-left: 30px;">
+        <h3>automotive essentials | Up <br>to 60% off</h3>
+        <div style="display:flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Glasscare1X._SY116_CB410830553_.jpg" alt="">
+            <h5>Cleaning accessories</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px;height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Rim_tyrecare1x._SY116_CB410830552_.jpg" alt="">
+            <h5>Tyre & rim care</h5>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vega_helmet_186x116._SY116_CB405090404_.jpg" alt="">
+            <h5>Helmets</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px; height:100px;width: 130px;"src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vaccum1x._SY116_CB410830552_.jpg" alt="">
+        <h5>Vaccum cleaner</h5>
+        </div>
+    </div>
+    </fieldset>
+</div>
+
+<fieldset style="border: 0px;height: 280px;margin: 20px;background-color: white;">
+<h3>Starting ₹199 | Health & personal care essentials from emerging brands</h3>
+<div style="display: flex;">
+    <img src="https://m.media-amazon.com/images/I/71VHGgB6X5L._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/61ZdnKADddL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/41FdBXeXDxL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/51FeohSA9PL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/61BjMDXbtzL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/71ZfX0wMPoL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/517PkYdl6WL._AC_SY200_.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/614wiKi1YpL._AC_SY200_.jpg" alt="">
+</div>
+</fieldset>
+
+
+<fieldset style="border: 0px;height: 280px;margin: 20px;background-color: white;">
+<h3>Up to 60% off | Best offers on furniture from stores near you</h3>
+<div style="padding-left:40px;">
+<img src="https://m.media-amazon.com/images/I/41jcYNdQFML._AC_SY200_.jpg" alt="">
+<img src="https://m.media-amazon.com/images/I/41g8goVyb1L._AC_SY200_.jpg" alt="">
+<img src="https://m.media-amazon.com/images/I/7125VtC-31L._AC_SY200_.jpg" alt="">
+<img src="https://m.media-amazon.com/images/I/51uMQLSqNQL._AC_SY200_.jpg" alt="">
+<img src="https://m.media-amazon.com/images/I/71Yz09AgrrL._AC_SY200_.jpg" alt="">
+</div>
+</fieldset>
+
+
+
+<div style="display: flex;">
+    <fieldset style="border: 0px; background-color: white; height: 400px;width:280px;margin-left: 30px;">
+        <h3>Under ₹499 | Pocket- <br> friendly fashion</h3>
+        <div style="display:flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC-PFF/PFF-1-186-116._SY116_CB636055991_.jpg" alt="">
+            <h5>Clothing</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px;height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC-PFF/PFF-3-186-116._SY116_CB636055991_.jpg" alt="">
+            <h5>Backpacks</h5>
+        </div>
+        </div>
+        <div style="display: flex;">
+        <div>
+            <img style="height:100px;width: 130px;" src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC-PFF/PFF-2-186-116._SY116_CB636055991_.jpg" alt="">
+            <h5>Footwear</h5>
+        </div>
+        <div>
+            <img style="margin-left: 10px; height:100px;width: 130px;"src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC-PFF/PFF-4-186-116._SY116_CB636055991_.jpg" alt="">
+        <h5>View All</h5>
+        </div>
+        </div>
+    </fieldset>
+
+
+
+    <fieldset style="border: 0px; background-color: white; height: 400px;width:280px;margin-left: 10px;">
+        <h3>Customers’ Most-Loved <br> Fashion for you</h3>
+        <div style="display:flex;">
+        <div>
+            <img style="height:130px;width: 100px;" src="https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg" alt="">
+            <h5></h5>
+        </div>
+        <div>
+            <img style="margin-left: 60px;height:130px;width: 100px;" src="https://m.media-amazon.com/images/I/61H548ZWlEL._AC_SY145_.jpg" alt="">
+            <h5></h5>
+        </div>
+        </div>
+        <div style="display: flex;">
+        <div>
+            <img style="height:100px;width: 100px;" src="https://m.media-amazon.com/images/I/71k8TsERkwL._AC_SY145_.jpg" alt="">
+            <h5></h5>
+        </div>
+        <div>
+            <img style="margin-left: 60px; height:100px;width: 100px;"src="https://m.media-amazon.com/images/I/71GBIzINqAL._AC_SY145_.jpg" alt="">
+        <h5></h5>
+        </div>
+        </div>
+    </fieldset>
+
+
+
+    <fieldset style="border: 0px; background-color: white; height: 400px;width:280px;margin-left: 10px;">
+        <h3>Up to 60% off | Home & <br> kitchen essentials from w…
+        </h3>
+        <div>
+        <div>
+            <img style="height:150px;width: 200px;padding-left: 50px;" src="https://m.media-amazon.com/images/I/71QED8-OFhL._AC_SY175_.jpg" alt="">
+            <h5 style="width: 200px; margin-left: 40px;">Hago Fridge Storage Boxes Freezer Storage Containers, Containes for Kitchen Storage S...</h5>
+        </div>
+        <div style="display: flex;">
+            <img style="margin-left: 20px;height:50px;width: 50px;" src="https://m.media-amazon.com/images/I/71QED8-OFhL._AC_SY55_.jpg" alt="">
+            <img style="margin-left: 20px;height:50px;width: 50px;" src="https://m.media-amazon.com/images/I/61u9iYEHlAL._AC_SY55_.jpg" alt="">
+            <img style="margin-left: 20px; height:50px;width: 50px;"src="https://m.media-amazon.com/images/I/71AISWjoiGL._AC_SY55_.jpg" alt="">
+            
